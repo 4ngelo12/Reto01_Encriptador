@@ -1,0 +1,24 @@
+{
+  "name": "reto01_encriptador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass main.scss assets/css/style.css", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ngelo12/Reto01_Encriptador.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4ngelo12/Reto01_Encriptador/issues"
+  },
+  "homepage": "https://github.com/4ngelo12/Reto01_Encriptador#readme",
+  "devDependencies": {
+    "sass": "^1.62.0"
+  }
+}

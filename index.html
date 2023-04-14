@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Press+Start+2P&family=Space+Grotesk&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Encriptador</title>
+</head>
+
+<body>
+
+    <hr class="distorcion contenedor">
+
+    <div class="fondo contenedor">
+        <header class="header">
+            <nav class="header-nav">
+                <img src="assets/img/logo.svg" class="imgs" alt="Logo">
+
+                <div class="header-nav-links">
+                    <a href="#">Encriptar</a>
+                    <a href="#">Desencriptar</a>
+                </div>
+            </nav>
+        </header>
+
+        <hr class="separador">
+
+        <div class="encriptador">
+            <div class="encriptador-campo">
+                <label>> </label>
+                <textarea placeholder="Ingresa el texto aqui"></textarea>
+            </div>
+
+            <div class="encriptador-advertencia">
+                <img src="assets/img/advertencia.svg" alt="Advertencia">
+
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+        </div>
+
+        <div class="encriptado">
+            <div class="encriptado-vacio">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+
+            <div class="encriptado-texto none">
+                <textarea id="textoencriptado" class="campo-texto" readonly>Ojito gente</textarea>
+
+                <buttons="Copiar">Copiar</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
