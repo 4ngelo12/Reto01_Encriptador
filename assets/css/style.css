@@ -54,7 +54,7 @@ img {
     background-position-y: 0, 0;
   }
   100% {
-    transform: translateY(740px);
+    transform: translateY(100vh);
   }
 }
 .separador {
@@ -127,6 +127,15 @@ p {
   color: #63ff2b;
 }
 
+@media (min-width: 768px) {
+  .header-nav-presentacion {
+    gap: 10rem;
+  }
+  .header-nav-presentacion h1 {
+    font-size: 3rem;
+    margin: 0 0 0 3rem;
+  }
+}
 .header-nav-links {
   display: flex;
   flex-direction: row;
@@ -146,6 +155,11 @@ p {
   padding: 1rem 2rem;
 }
 
+@media (min-width: 768px) {
+  .header-nav-links {
+    gap: 4rem;
+  }
+}
 @keyframes parpadeo {
   from {
     background-color: transparent;
@@ -208,6 +222,14 @@ textarea::placeholder {
   margin-top: 3rem;
 }
 
+@media (min-width: 768px) {
+  .encriptador, .encriptado {
+    margin: 0 5rem;
+  }
+  .encriptado {
+    margin-top: 3rem;
+  }
+}
 .encriptado-vacio {
   justify-content: center;
 }
@@ -218,6 +240,22 @@ textarea::placeholder {
 
 .encriptado-texto {
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .encriptado-texto {
+    width: 85%;
+  }
+}
+/*Fuentes*/
+/* Colores */
+.footer {
+  margin-top: 2rem;
+}
+.footer p {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  line-height: 1.5;
 }
 
 /*Base*/
