@@ -2,9 +2,15 @@
 
 .footer {
     margin-top: 2rem;
+
     p {
         text-align: center;
         font-family: $Presentacion;
         line-height: 1.5;
+    }
+
+    a {
+        color: $ColorContenido;
+        text-decoration: none;
     }
 }
