@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -27,8 +28,8 @@
                 </div>
 
                 <div class="header-nav-links">
-                    <a href="#">Encriptar</a>
-                    <a href="#">Desencriptar</a>
+                    <a href="#" id="BEncriptar" class="seleccionado">Encriptar</a>
+                    <a href="#" id="BDesencriptar">Desencriptar</a>
                 </div>
             </nav>
         </header>
@@ -39,10 +40,6 @@
             <div class="encriptador-campo">
                 <label>> </label>
                 <textarea placeholder="Ingresa el texto aqui" id="encriptar"></textarea>
-
-                <textarea name="" id="encriptado" cols="30" rows="10"></textarea>
-
-                <input type="button" id="boton" value="Boton">
             </div>
 
             <div class="encriptador-advertencia">
@@ -53,15 +50,15 @@
         </div>
 
         <div class="encriptado">
-            <div class="encriptado-vacio">
+            <div class="encriptado-vacio flex">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
 
             <div class="encriptado-texto none">
-                <textarea id="textoencriptado" class="campo-texto" readonly>Ojito gente</textarea>
+                <textarea id="encriptado" class="campo-texto" readonly></textarea>
 
-                <buttons="Copiar">Copiar</button>
+                <input type="button" class="boton" value="Copiar">
             </div>
         </div>
 
