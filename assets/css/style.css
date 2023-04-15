@@ -68,6 +68,11 @@ p {
   font-size: 1.6rem;
 }
 
+@media (min-width: 768px) {
+  p {
+    font-size: 2rem;
+  }
+}
 .none {
   display: none;
 }
@@ -159,6 +164,9 @@ p {
   .header-nav-links {
     gap: 4rem;
   }
+  .header-nav-links a {
+    font-size: 2.8rem;
+  }
 }
 @keyframes parpadeo {
   from {
@@ -183,6 +191,12 @@ textarea {
   font-size: 1.6rem;
 }
 
+@media (min-width: 768px) {
+  label,
+  textarea {
+    font-size: 3rem;
+  }
+}
 textarea {
   width: 100%;
   background-color: transparent;
@@ -223,7 +237,8 @@ textarea::placeholder {
 }
 
 @media (min-width: 768px) {
-  .encriptador, .encriptado {
+  .encriptador,
+  .encriptado {
     margin: 0 5rem;
   }
   .encriptado {
