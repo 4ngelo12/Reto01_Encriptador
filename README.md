@@ -3,6 +3,8 @@
 ## Descripción 📋
 Para este reto se debe crear un programa que encripte y desencripte el texto ingresado en los campos de texto, además, el programa debe ser capaz de copiar tanto el texto encriptado como el texto desencriptado al portapapeles.
 
+![Imagen](assets/img/Imagen_pagina.png)
+
 ## Algunos Mensajes para Desencriptar 🔏
 
 - fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!
