@@ -361,6 +361,10 @@ body {
   background: linear-gradient(90deg, rgb(47, 57, 47) 13%, rgb(35, 50, 37) 47%, rgb(55, 65, 56) 74%);
 }
 
+.principal {
+  margin: 5rem 0;
+}
+
 .contenedor {
   width: min(90%, 120rem);
   margin: 0 auto;
