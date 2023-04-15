@@ -36,24 +36,29 @@ img {
 }
 
 .fondo {
+  background: linear-gradient(to bottom, transparent, #253422, rgba(136, 136, 136, 0), rgba(102, 102, 102, 0), rgba(68, 68, 68, 0.3333333333), rgba(34, 34, 34, 0.5333333333), rgba(68, 68, 68, 0.2), transparent), repeating-linear-gradient(transparent 0 2px, #3d5629 2px 4px);
   border-radius: 1rem;
-  background: repeating-linear-gradient(0deg, #253422 1px, #429e32 2px 2px);
   padding: 2rem;
+  overflow: hidden;
 }
 
 .distorcion {
+  position: relative;
+  width: 115%;
+  left: -20px;
+  top: -18px;
   background: linear-gradient(0deg, rgb(255, 255, 255) 25%, rgb(167, 201, 175) 77%);
   opacity: 0.3;
-  height: 1rem;
+  height: 1.5rem;
   animation: animate 10s ease-in-out infinite;
 }
 
 @keyframes animate {
   0% {
-    transform: translateY(100%);
+    background-position-y: 0, 0;
   }
   100% {
-    transform: translateY(6000%);
+    transform: translateY(580px);
   }
 }
 .separador {
@@ -72,6 +77,28 @@ p {
 
 /*Fuentes*/
 /* Colores */
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-nav-presentacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4rem;
+}
+.header-nav-presentacion h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: end;
+  color: #63ff2b;
+}
+
 .header-nav-links {
   display: flex;
   flex-direction: row;

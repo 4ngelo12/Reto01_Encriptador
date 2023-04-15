@@ -17,13 +17,14 @@
 </head>
 
 <body>
-
-    <hr class="distorcion contenedor">
-
     <div class="fondo contenedor">
+        <hr class="distorcion">
         <header class="header">
             <nav class="header-nav">
-                <img src="assets/img/logo.svg" class="imgs" alt="Logo">
+                <div class="header-nav-presentacion">
+                    <img src="assets/img/logo.svg" class="imgs" alt="Logo">
+                    <h1>Reto Encriptador</h1>
+                </div>
 
                 <div class="header-nav-links">
                     <a href="#">Encriptar</a>
@@ -37,7 +38,11 @@
         <div class="encriptador">
             <div class="encriptador-campo">
                 <label>> </label>
-                <textarea placeholder="Ingresa el texto aqui"></textarea>
+                <textarea placeholder="Ingresa el texto aqui" id="encriptar"></textarea>
+
+                <textarea name="" id="encriptado" cols="30" rows="10"></textarea>
+
+                <input type="button" id="boton" value="Boton">
             </div>
 
             <div class="encriptador-advertencia">
@@ -62,5 +67,7 @@
 
     </div>
 </body>
+
+<script src="assets/js/main.js"></script>
 
 </html>
