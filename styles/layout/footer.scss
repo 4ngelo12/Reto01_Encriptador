@@ -1,4 +1,5 @@
 @import "../base/variables.scss";
+@import "../base/mixins.scss";
 
 .footer {
     margin-top: 2rem;
@@ -8,9 +9,19 @@
         font-family: $Presentacion;
         line-height: 1.5;
     }
+}
+
+.footer-repo {
+
+    @include flex(row);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 
     a {
         color: $ColorContenido;
+        font-size: 1.8rem;
         text-decoration: none;
-    }
-}
+    }  
+} 
+

@@ -603,6 +603,8 @@ textarea::placeholder {
 }
 /*Fuentes*/
 /* Colores */
+/*Fuentes*/
+/* Colores */
 .footer {
   margin-top: 2rem;
 }
@@ -611,8 +613,17 @@ textarea::placeholder {
   font-family: "Press Start 2P", cursive;
   line-height: 1.5;
 }
-.footer a {
+
+.footer-repo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer-repo a {
   color: #63ff2b;
+  font-size: 1.8rem;
   text-decoration: none;
 }
 
