@@ -1,0 +1,9 @@
+/*Base*/
+@use "styles/base/globales.scss";
+@use "styles/base/utilidades.scss";
+@use "styles/base/botones.scss";
+
+/*Layout*/
+@use "styles/layout/header.scss";
+@use "styles/layout/contenido.scss";
+@use "styles/layout/footer.scss";

@@ -1,0 +1,78 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+html {
+    font-size: 62.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    background: rgb(47, 57, 47);
+    background: linear-gradient(90deg, rgba(47, 57, 47, 1) 13%, rgba(35, 50, 37, 1) 47%, rgba(55, 65, 56, 1) 74%);
+}
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.fondo {
+    background:
+        linear-gradient(to bottom, transparent, #253422, #88888800, #66666600, #44444455, #22222288, #44444433, transparent),
+        repeating-linear-gradient(transparent 0 2px, #3d5629 2px 4px);
+    border-radius: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.distorcion {
+    position: relative;
+    width: 115%;
+    left: -20px;
+    top: -18px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 25%, rgba(167, 201, 175, 1) 77%);
+    opacity: 0.3;
+    height: 1.5rem;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0, 0;
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.separador {
+    height: .3rem;
+    background-color: #dbffb8;
+    border: none;
+    margin: 1rem 0 5rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+@include tablet {
+    p {
+        font-size: 2rem;
+    }
+}

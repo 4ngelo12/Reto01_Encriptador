@@ -1,0 +1,10 @@
+@import "../base/variables.scss";
+
+.footer {
+    margin-top: 2rem;
+    p {
+        text-align: center;
+        font-family: $Presentacion;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,68 @@
+@import "../base/variables.scss";
+@import "../base/mixins.scss";
+
+.header-nav {
+    @include flex(column);
+    gap: 1.5rem;
+}
+
+.header-nav-presentacion {
+    @include flex(row);
+    align-items: center;
+    justify-content: space-around;
+    gap: 4rem;
+
+    h1 {
+        font-family: $Presentacion;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        text-align: end;
+        color: $ColorContenido;
+    }
+}
+
+@include tablet {
+    .header-nav-presentacion {
+        gap: 10rem;
+
+        h1 {
+            font-size: 3rem;
+            margin: 0 0 0 3rem;
+        }
+    }
+}
+
+.header-nav-links {
+    @include flex(row);
+    justify-content: space-around;
+    margin-top: 2.5rem;
+
+    .seleccionado {
+        background-color: #a1c793;
+        font-weight: bold;
+        color: #000;
+        animation: parpadeo 2s ease-in-out infinite alternate;
+    }
+
+    a {
+        @include enlaces($ColorContenido);
+        padding: 1rem 2rem;
+    }
+}
+
+@include tablet {
+    .header-nav-links {
+        gap: 4rem;
+
+        a {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@keyframes parpadeo {
+    from {
+        background-color: transparent;
+        color: $ColorContenido;
+    }
+}
