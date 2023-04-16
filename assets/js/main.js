@@ -110,7 +110,6 @@ const copiar = () => {
         navigator.clipboard.writeText(textoCopiado.value);
         textoEncriptar.value = "";
     }
-
 }
 
 const seleccionarEncriptar = () => {
