@@ -12,16 +12,19 @@
 }
 
 .footer-repo {
-
-    @include flex(row);
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    @include flex(column);
 
     a {
         color: $ColorContenido;
         font-size: 1.8rem;
         text-decoration: none;
-    }  
-} 
+    }
+}
 
+@include tablet {
+    .footer-repo {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+}

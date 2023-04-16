@@ -362,7 +362,7 @@ body {
 }
 
 .principal {
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 
 .contenedor {
@@ -421,7 +421,7 @@ p {
 }
 
 .red {
-  color: red;
+  background-color: red;
 }
 
 .flex {
@@ -436,7 +436,7 @@ p {
 .boton {
   color: #f5f5f5;
   padding: 1.5rem 3.5rem;
-  font-family: "Encode Sans SC", sans-serif;
+  font-family: "Encode Sans", sans-serif;
   background-color: #569550;
   margin-top: 2rem;
   text-transform: uppercase;
@@ -529,7 +529,7 @@ p {
 
 label,
 textarea {
-  font-family: "Encode Sans SC", sans-serif;
+  font-family: "Encode Sans", sans-serif;
   color: #63ff2b;
   font-size: 1.6rem;
 }
@@ -541,6 +541,7 @@ textarea {
   }
 }
 textarea {
+  font-family: "Encode Sans", sans-serif;
   width: 100%;
   background-color: transparent;
   border: 0;
@@ -620,10 +621,8 @@ textarea::placeholder {
 
 .footer-repo {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
 }
 .footer-repo a {
   color: #63ff2b;
@@ -631,6 +630,13 @@ textarea::placeholder {
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .footer-repo {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
 /*Base*/
 /*Layout*/
 

@@ -110,8 +110,9 @@ const copiar = () => {
         navigator.clipboard.writeText(textoCopiado.value);
         textoEncriptar.value = "";
     }
-
+    
 }
+
 
 const seleccionarEncriptar = () => {
     botonEncriptar.classList.add("seleccionado");
@@ -126,6 +127,7 @@ const seleccionarDesencriptar = () => {
 
     accion();
 }
+
 
 botonEncriptar.addEventListener('click', seleccionarEncriptar);
 botonDesencriptar.addEventListener('click', seleccionarDesencriptar);
