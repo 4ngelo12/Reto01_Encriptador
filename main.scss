@@ -1,10 +1,7 @@
-/*Base*/
-@use "styles/base/normalize.scss";
-@use "styles/base/globales.scss";
-@use "styles/base/utilidades.scss";
-@use "styles/base/botones.scss";
-
-/*Layout*/
-@use "styles/layout/header.scss";
-@use "styles/layout/contenido.scss";
-@use "styles/layout/footer.scss";
+@use "styles/base/normalize";
+@use "styles/base/globales";
+@use "styles/base/utilidades";
+@use "styles/base/botones";
+@use "styles/layout/header";
+@use "styles/layout/contenido";
+@use "styles/layout/footer";

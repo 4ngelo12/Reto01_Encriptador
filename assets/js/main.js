@@ -1,15 +1,16 @@
 const botonEncriptar = document.querySelector("#BEncriptar");
 const botonDesencriptar = document.querySelector("#BDesencriptar");
+const divEncriptar = document.querySelector("#div_campo_encriptar");
+const divDesencriptar = document.querySelector("#div_campo_desencriptar");
 const textoEncriptar = document.querySelector("#encriptar");
-const encriptado = document.querySelector("#encriptado");
+const textoDesencriptar = document.querySelector("#desencriptar");
+const mensaje = document.querySelector("#mensaje");
 const contenedorVacio = document.querySelector(".encriptado-vacio");
 const contenedorTextoCopiar = document.querySelector(".encriptado-texto");
 const botonCopiar = document.querySelector(".boton");
-const botonEnc = document.querySelector("#botonE");
-let validacion = true;
 
 const mostrar = () => {
-    if (textoEncriptar.value !== "") {
+    if (textoEncriptar.value !== "" || textoDesencriptar.value !== "") {
         contenedorVacio.classList.add("none");
         contenedorVacio.classList.remove("flex");
         contenedorTextoCopiar.classList.remove("none");
@@ -27,81 +28,64 @@ const validarDatos = () => {
     if (evento.charCode >= " ".charCodeAt() && evento.charCode <= ".".charCodeAt()
         || evento.charCode === ",".charCodeAt()
         || evento.charCode > "`".charCodeAt() && evento.charCode < "{".charCodeAt()
-        || evento.charCode === "ñ".charCodeAt()) {
-        validacion = true;
+        || evento.charCode === "ñ".charCodeAt() || evento.charCode === 13) {
+        return true;
     }
     else {
         alert("¡Error!, por favor lee la advertencia");
-        validacion = false;
+        return false;
     }
 }
 
 const encriptar = (e) => {
     let textoEncriptado = "";
-    let cadena = e.target.value;
     let cadenaCaracteres = [];
+    let cadena = e.target.value;
     let cadenaMinuscula = cadena.toLowerCase();
-    console.log(cadenaMinuscula.charCode);
 
-    if (validacion) {
-        for (let i = 0; i <= cadenaMinuscula.length; i++) {
-            if (cadenaMinuscula[i] == "a" || cadenaMinuscula[i] == "á") {
-                cadenaCaracteres[i] = "ai";
-            } else if (cadenaMinuscula[i] == "e" || cadenaMinuscula[i] == "é") {
-                cadenaCaracteres[i] = "enter";
-            } else if (cadenaMinuscula[i] == "i" || cadenaMinuscula[i] == "í") {
-                cadenaCaracteres[i] = "imes";
-            } else if (cadenaMinuscula[i] == "o" || cadenaMinuscula[i] == "ó") {
-                cadenaCaracteres[i] = "ober";
-            } else if (cadenaMinuscula[i] == "u" || cadenaMinuscula[i] == "ú") {
-                cadenaCaracteres[i] = "ufat";
-            } else {
-                cadenaCaracteres[i] = cadenaMinuscula[i];
-            }
-            textoEncriptado = cadenaCaracteres.join("");
+    for (let i = 0; i <= cadenaMinuscula.length; i++) {
+        if (cadenaMinuscula[i] == "a" || cadenaMinuscula[i] == "á") {
+            cadenaCaracteres[i] = "ai";
+        } else if (cadenaMinuscula[i] == "e" || cadenaMinuscula[i] == "é") {
+            cadenaCaracteres[i] = "enter";
+        } else if (cadenaMinuscula[i] == "i" || cadenaMinuscula[i] == "í") {
+            cadenaCaracteres[i] = "imes";
+        } else if (cadenaMinuscula[i] == "o" || cadenaMinuscula[i] == "ó") {
+            cadenaCaracteres[i] = "ober";
+        } else if (cadenaMinuscula[i] == "u" || cadenaMinuscula[i] == "ú") {
+            cadenaCaracteres[i] = "ufat";
+        } else {
+            cadenaCaracteres[i] = cadenaMinuscula[i];
         }
-        encriptado.value = textoEncriptado;
-        console.log(textoEncriptado);
-
-        mostrar();
+        textoEncriptado = cadenaCaracteres.join("");
     }
+
+    mensaje.value = textoEncriptado;
+    mostrar();
 }
 
-const Desencriptar = (e) => {
+const desencriptar = (e) => {
     let cadena = e.target.value;
 
-    if (validacion) {
-        for (let x = 0; x <= cadena.length; x++) {
-            if (cadena.includes("ai")) {
-                cadena = cadena.replace("ai", "a")
-            } else if (cadena.includes("enter")) {
-                cadena = cadena.replace("enter", "e")
-            } else if (cadena.includes("imes")) {
-                cadena = cadena.replace("imes", "i")
-            } else if (cadena.includes("ober")) {
-                cadena = cadena.replace("ober", "o")
-            } else if (cadena.includes("ufat")) {
-                cadena = cadena.replace("ufat", "u")
-            }
-            encriptado.value = cadena;
-            mostrar(encriptado);
+    for (let x = 0; x <= cadena.length; x++) {
+        if (cadena.includes("ai")) {
+            cadena = cadena.replace("ai", "a")
+        } else if (cadena.includes("enter")) {
+            cadena = cadena.replace("enter", "e")
+        } else if (cadena.includes("imes")) {
+            cadena = cadena.replace("imes", "i")
+        } else if (cadena.includes("ober")) {
+            cadena = cadena.replace("ober", "o")
+        } else if (cadena.includes("ufat")) {
+            cadena = cadena.replace("ufat", "u")
         }
     }
-}
-
-const accion = () => {
-    if (botonEncriptar.className == "seleccionado") {
-        textoEncriptar.addEventListener('input', encriptar);
-    } if (botonDesencriptar.className == "seleccionado") {
-        textoEncriptar.addEventListener('input', Desencriptar);
-    }
-
-    encriptado.value = "";
+    mensaje.value = cadena;
     mostrar();
 }
 
 const copiar = () => {
-    let textoCopiado = encriptado;
+    let textoCopiado = mensaje;
     if (!navigator.clipboard) {
         textoCopiado.select();
         document.execCommand("copy");
@@ -109,7 +93,30 @@ const copiar = () => {
     } else {
         navigator.clipboard.writeText(textoCopiado.value);
         textoEncriptar.value = "";
+        textoDesencriptar.value = "";
     }
+}
+
+const accion = () => {
+    if (botonEncriptar.classList.contains("seleccionado")) {
+        textoEncriptar.addEventListener('input', encriptar);
+        divEncriptar.classList.add("encriptador-campo");
+        divEncriptar.classList.remove("none");
+
+        divDesencriptar.classList.remove("encriptador-campo");
+        divDesencriptar.classList.add("none");
+        textoEncriptar.onkeypress = validarDatos;
+    } else {
+        textoDesencriptar.addEventListener('input', desencriptar);
+        divDesencriptar.classList.add("encriptador-campo");
+        divDesencriptar.classList.remove("none");
+
+        divEncriptar.classList.remove("encriptador-campo");
+        divEncriptar.classList.add("none");
+        textoDesencriptar.onkeypress = validarDatos;
+    }
+
+    mostrar();
 }
 
 const seleccionarEncriptar = () => {
@@ -126,9 +133,7 @@ const seleccionarDesencriptar = () => {
     accion();
 }
 
+accion();
 botonEncriptar.addEventListener('click', seleccionarEncriptar);
 botonDesencriptar.addEventListener('click', seleccionarDesencriptar);
 botonCopiar.addEventListener('click', copiar);
-textoEncriptar.onkeypress = validarDatos;
-
-accion();

@@ -45,9 +45,14 @@
             <hr class="separador">
 
             <div class="encriptador">
-                <div class="encriptador-campo">
+                <div class="encriptador-campo" id="div_campo_encriptar">
                     <label>> </label>
                     <textarea placeholder="Ingresa el texto aqui" id="encriptar"></textarea>
+                </div>
+
+                <div class="none" id="div_campo_desencriptar">
+                    <label>> </label>
+                    <textarea placeholder="Ingresa el texto aqui" id="desencriptar"></textarea>
                 </div>
 
                 <div class="encriptador-advertencia">
@@ -64,7 +69,7 @@
                 </div>
 
                 <div class="encriptado-texto none">
-                    <textarea id="encriptado" class="campo-texto" readonly></textarea>
+                    <textarea id="mensaje" class="campo-texto" readonly></textarea>
                     <input type="button" class="boton" value="Copiar">
                 </div>
             </div>
